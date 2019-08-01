@@ -8,11 +8,17 @@ using KvControl;
 
 namespace hmitest0720
 {
-    public class ITag : IComparable<ITag>
+    public abstract class ITag : IComparable<ITag>
     {
+        public ITag(short id,IKvController kvController)
+        {
+            this._id = id;
+            this._controller = kvController;
+        }
         private DateTime _timeStamp;
         private short _id;
         private IKvController _controller;
+        public KeyencePlcDrive plcDrive { get { return _plcDrive; } }
 
         public DateTime TimeStamp { get { return _timeStamp; } }
         public short ID { get { return _id; } }
@@ -38,7 +44,7 @@ namespace hmitest0720
             {
                 return null;
             }
-            return KeyencePlcDrive.GetDeviceAddress(_controller.KVMemAddr, 1);
+            return plcDrive.GetDeviceAddress(_controller.KVMemAddr, 1);
         }
         public void Update(Storage newValue)
         {
@@ -48,6 +54,10 @@ namespace hmitest0720
                 ValueChange(this, new ValueChangeEventArgs(newValue));
             }
         }
+
+        public abstract Storage Read();
+
+        public abstract int Write(object value);
         public int CompareTo(ITag other)
         {
             if (this.Equals(other))
@@ -60,6 +70,24 @@ namespace hmitest0720
             }
         }
         public ValueChangeHandler ValueChange;
+        private KeyencePlcDrive _plcDrive;
+    }
+
+    public class FloatTag : ITag
+    {
+        public FloatTag(short id, IKvController kvController) : base(id, kvController)
+        {
+        }
+
+        public override Storage Read()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override int Write(object value)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 4)]

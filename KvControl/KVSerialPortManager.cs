@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace KvControl{
-
-	
-	enum ServiceStatus{
+namespace KvControl
+{
+	enum ServiceStatus
+    {
 		Initial,
 		Ready,
 		Posted,
@@ -26,17 +26,20 @@ namespace KvControl{
 	/// <summary>
 	/// Description of KVSerialPortManager.
 	/// </summary>
-	public sealed class KVSerialPortManager    {
+	public sealed class KVSerialPortManager
+	{
 		private static KVSerialPortManager instance = new KVSerialPortManager();
 		
-		public static KVSerialPortManager Instance {
-			get {
+		public static KVSerialPortManager Instance
+        {
+			get
+            {
 				return instance;
 			}
 		}
 		
 		private SerialPort serialPort=null;
-		
+		 
 		private IKvController currentBox=null;
 		
 		private ServiceStatus Status;

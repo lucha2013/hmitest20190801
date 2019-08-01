@@ -41,7 +41,8 @@ namespace hmitest0720
         short ID { get; }
         string Name { get; }
         int UpdateRate { get; set; }
-        float DeadBand { get; set; }
+        IEnumerable<ITag> Items { get; }
+        //float DeadBand { get; set; }
         bool AddTags(IEnumerable<ITag> tags);
         bool RemoveTags(params ITag[] tags);
     }

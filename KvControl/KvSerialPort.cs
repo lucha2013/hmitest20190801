@@ -15,13 +15,19 @@ namespace KvControl
 	/// Description of KvSerialPort.
 	/// </summary>
 	public sealed class KvSerialPort:SerialPort
-	{		
-		public KvSerialPort()
+    {
+
+        public KvSerialPort()
 		{
 		}
 		
 		public void Start(){
 			KVSerialPortManager.Instance.Init(this);
 		}
-	}
+
+        private void InitializeComponent()
+        {
+
+        }
+    }
 }

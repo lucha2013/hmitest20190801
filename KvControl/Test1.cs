@@ -7,7 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-using NUnit.Framework;
+//using NUnit.Framework;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Threading;
@@ -15,11 +15,11 @@ using System.IO.Ports;
 
 namespace KvControl
 {
-	[TestFixture]
+//	[TestFixture]
 	public class Test1
 	{
 		
-		[Test]
+//		[Test]
 		public void TestMethod()
 		{
 			var users = new Queue<Box>();
@@ -49,7 +49,7 @@ namespace KvControl
 			
 		}
 		
-		[Test]
+//		[Test]
 		public void TestQueue(){
 			var workingList = new Queue<string>(10);
 			workingList.Enqueue("1");
@@ -57,7 +57,7 @@ namespace KvControl
 			Console.WriteLine(workingList.Dequeue());
 		}
 		
-		[Test]
+//		[Test]
 		public void TestFloat()
 		{
 			var fs = "2.4";
@@ -70,7 +70,7 @@ namespace KvControl
 			
 		}
 		
-		[Test]
+//		[Test]
 		public void TestString()
 		{
 			var str =" ";
@@ -78,7 +78,7 @@ namespace KvControl
 			Console.WriteLine(arr.Length);
 		}
 		
-		[Test]
+//		[Test]
 		public void TestSerialPort(){
 			
 			var port = new SerialPort("COM3",9600,Parity.Even);

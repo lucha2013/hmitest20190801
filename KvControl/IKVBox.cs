@@ -7,7 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-
+//接口,可以做什么
 namespace KvControl
 {
 	/// <summary>

@@ -7,27 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KvControl;
 
 namespace hmitest0720
 {
-    public partial class Form1 : Form
+    public partial class ParaSetting : Form
     {
-        public Form ParaSetting { get; set; }
-
-        public Form1()
+        public Form FromForm { get; set; }
+        public ParaSetting()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            ParaSetting = new ParaSetting() { FromForm = this };
-        }
-
         private void Button1_Click(object sender, EventArgs e)
         {
-            this.ParaSetting.Show();
-            this.Hide();
+            if (FromForm != null)
+            {
+                this.Hide();
+                FromForm.Show();
+            }
         }
     }
 }

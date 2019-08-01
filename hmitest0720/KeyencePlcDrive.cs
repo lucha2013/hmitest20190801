@@ -52,6 +52,8 @@ namespace hmitest0720
             set { _timeout = value; }
         }
 
+        public IEnumerable<IGroup> Groups => throw new NotImplementedException();
+
         public void Dispose()
         {
             throw new NotImplementedException();
@@ -62,7 +64,7 @@ namespace hmitest0720
             throw new NotImplementedException();
         }
 
-        public static DeviceAddress GetDeviceAddress(string address,ushort len)
+        public DeviceAddress GetDeviceAddress(string address,ushort len)
         {
             
             Response<DeviceAddress> response=DeviceAddress.ParseKeyenceFrom(address,len);
@@ -216,6 +218,15 @@ namespace hmitest0720
             }
         }
 
+        public IGroup AddGroup(string name, short id, int updateRate, float deadBand = 0, bool active = false)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool RemoveGroup(IGroup group)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class DeviceAddress : DeviceAddressDataBase
