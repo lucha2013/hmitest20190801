@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hmitest0720", "hmitest0720\hmitest0720.csproj", "{0C8D4CF2-7B1F-427C-B74B-DFF6F0B53D3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KvControl", "KvControl\KvControl.csproj", "{1279DB04-0E75-4D21-A8DA-22EFDA4D8C64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C8D4CF2-7B1F-427C-B74B-DFF6F0B53D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C8D4CF2-7B1F-427C-B74B-DFF6F0B53D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C8D4CF2-7B1F-427C-B74B-DFF6F0B53D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C8D4CF2-7B1F-427C-B74B-DFF6F0B53D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1279DB04-0E75-4D21-A8DA-22EFDA4D8C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1279DB04-0E75-4D21-A8DA-22EFDA4D8C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1279DB04-0E75-4D21-A8DA-22EFDA4D8C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1279DB04-0E75-4D21-A8DA-22EFDA4D8C64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A424665-A826-468B-A9EE-42AB8194DA65}
+	EndGlobalSection
+EndGlobal
